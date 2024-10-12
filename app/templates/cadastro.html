@@ -1,26 +1,50 @@
 {% extends 'base.html' %}
 {% block conteudo %}
   <form action="/cadastrarUsuario" method="POST">
-      <label> CPF: </label>
-      <input type="text" name="cpf" /><br><br>
 
-      <label> Nome: </label>
-      <input type="text" name="nome" /><br><br>
+     <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF">
+        <label>CPF</label>
+     </div>
 
-      <label> Telefone: </label>
-      <input type="text" name="telefone" /><br><br>
+     <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="nome">
+        <label>Nome completo</label>
+     </div>
 
-      <label> Endereço: </label>
-      <input type="text" name="endereco" /><br><br>
+     <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="telefone">
+        <label>Telefone</label>
+     </div>
 
-      <button>Cadastrar</button>
+     <div class="form-floating">
+        <input type="text" class="form-control" id="endereco" name="endereco" placeholder="endereco">
+        <label>Endereço</label>
+     </div>
+
+    <br>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </div>
+
   </form>
-  <a href="/">Consultar Tudo</a><br><br>
-  <a href="/">Consultar Individual</a><br><br>
-  <a href="/">Atualizar</a><br><br>
-  <a href="/">Excluir</a><br><br>
 
+  <br>
 
-
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="/listar">Consultar tudo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/listarIndividual">Consultar Individual</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/atualizar">Atualizar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/excluir">Excluir</a>
+    </li>
+  </ul>
 
 {% endblock %}
